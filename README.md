@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # only_todo-framework
 =======
 ## Установка
@@ -59,3 +60,6 @@ npm run component:remove <componentName>
 
 При создании/удалении компонента перезапускать сборку не требуется, страница сама обновиться по мере редактирования файла.
 >>>>>>> 9a76a3d (add files)
+=======
+# only_todo-framework
+>>>>>>> 3f3ccb36fd7f4a95dfa31dfe3c674f3970c7afa4
