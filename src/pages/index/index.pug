@@ -1,0 +1,33 @@
+extends ../../app/pug/layout
+
+
+block title
+    | ToDo
+
+block content
+    main(data-barba="container" data-barba-namespace="index")
+        .wrapper
+            .todo__list
+                .todo__item
+                    input#checkbox-1.todo__input(type='checkbox')
+                    label.todo__label(for='checkbox-1')
+                      span.todo__span Пройти стажировку в Онли
+                .todo__item
+                    input#checkbox-2.todo__input(type='checkbox')
+                    label.todo__label(for='checkbox-2')
+                      span.todo__span Побриться
+                .todo__item
+                    input#checkbox-3.todo__input(type='checkbox')
+                    label.todo__label(for='checkbox-3')
+                      span.todo__span Купить молоко
+                .todo__item
+                    input#checkbox-4.todo__input(type='checkbox')
+                    label.todo__label(for='checkbox-4')
+                      span.todo__span Не забыть забрать сына из садика  
+                .todo__item
+                    input#checkbox-5.todo__input(type='checkbox')
+                    label.todo__label(for='checkbox-5')
+                      span.todo__span Купить сыр
+
+            .todo__button--add
+                button.todo__button  

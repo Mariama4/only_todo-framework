@@ -1,0 +1,142 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    overflow: auto;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, ul, li {
+    // font-size: inherit;
+    // font-weight: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+[data-barba="container"] {
+    position: relative;
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 40px;
+}
+
+.todo {
+    $root: &;
+
+    &__list {
+        display: flex;
+        flex-flow: column nowrap;
+        max-width: 1280px;
+    }
+
+    &__item {
+        position: relative;
+        font-size: 18px;
+        letter-spacing: 0.01em;
+        margin-bottom: 30px;
+    }
+
+    &__input {
+        opacity: 0;
+        width: 22px;
+        height: 22px;
+        position: absolute;
+    }
+
+    &__span {
+        padding-left: 36px;
+        line-height: 1.5;
+    }
+
+    &__span:hover{
+        cursor: pointer;
+        opacity: 0.5;
+    }
+
+    &__label:before {
+        content: "";
+        display: block;
+        width: 22px;
+        height: 22px;
+        border: 2px solid #D9D9D9;
+        border-radius: 100%;
+        position: absolute;
+    }
+
+    &__label:after {
+        content: "";
+        display: block;
+        width: 14px;
+        height: 14px;
+        opacity: 0;
+        background: #23A3FF;
+        border-radius: 10px;
+        position: absolute;
+        top: .35em;
+        left: .35em;
+        transition: 0.1s;
+    }
+
+    &__label--edit:after {
+        content: "";
+        display: block;
+        width: 14px;
+        height: 14px;
+        opacity: 0;
+        color: white;
+        background: #E85C5C;
+        border-radius: 10px;
+        position: absolute;
+        top: .35em;
+        left: .35em;
+        transition: 0.1s;
+    }
+
+    &__input:checked + &__label:after {
+        opacity: 1;
+    }
+
+    &__button--add {
+        text-align: right;
+        margin-top: 250px;
+    }
+
+    &__button {
+        border: none;
+        color: white;
+        padding: 20px;
+        margin: 20px 40px;
+        border-radius: 100%;
+        width: 60px;
+        height: 60px;
+        box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    &__button:before,
+    &__button:after {
+        position: absolute;
+        margin: -11px 0px;
+        content: ' ';
+        background-color: #23A3FF;
+        width: 2px;
+        height: 24px;
+    }
+
+    &__button:before {
+        transform: rotate(90deg);
+    }
+
+}
+
