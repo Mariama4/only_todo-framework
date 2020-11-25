@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, ul, li {
     margin: 0 auto;
     padding-left: 40px;
 }
-
+// list
 .todo {
     $root: &;
 
@@ -40,6 +40,10 @@ h1, h2, h3, h4, h5, ul, li {
         flex-flow: column nowrap;
         max-width: 1280px;
     }
+}
+//item of list
+.todo {
+    $root: &;
 
     &__item {
         position: relative;
@@ -58,11 +62,10 @@ h1, h2, h3, h4, h5, ul, li {
     &__span {
         padding-left: 36px;
         line-height: 1.5;
-    }
-
-    &__span:hover{
-        cursor: pointer;
-        opacity: 0.5;
+        &:hover{
+            cursor: pointer;
+            opacity: 0.5;
+        }
     }
 
     &__label:before {
@@ -107,6 +110,11 @@ h1, h2, h3, h4, h5, ul, li {
     &__input:checked + &__label:after {
         opacity: 1;
     }
+}
+
+//list button
+.todo {
+    $root: &;
 
     &__button--add {
         text-align: right;

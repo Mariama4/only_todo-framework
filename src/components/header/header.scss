@@ -25,12 +25,12 @@
         outline: none;
         cursor: pointer;
         transition: background-color .2s, color .2s;
-    }
-
-    &__button:hover,
-    &__button:focus {
-        outline: none;
-        background-color: #23a3ff;
-        color: white;
+        
+        &:hover,
+        &:focus {
+            outline: none;
+            background-color: #23a3ff;
+            color: white;
+        }
     }
 }
